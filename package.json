@@ -12,8 +12,6 @@
     "clean-deep": "^3.4.0",
     "flat": "^5.0.2",
     "xml2js": "^0.4.23",
-    "xml2json": "^0.12.0",
-    "xsd": "0.0.2",
-    "xsd2jsonschema": "^0.3.7"
+    "xml2json": "^0.12.0"
   }
 }
