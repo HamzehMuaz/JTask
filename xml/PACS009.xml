@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:cma:stp:xsd:stp.1.0">
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>CBJOJOAXIPS</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>CBJOJOAXRTG</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>200702CBJOJOAXAIPS0001000009</BizMsgIdr>
+         <MsgDefIdr>pacs.009.001.07</MsgDefIdr>
+         <BizSvc>IPS</BizSvc>
+         <CreDt>2020-07-02T06:01:03Z</CreDt>
+         <PssblDplct>true</PssblDplct>
+         <Sgntr>
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+               <ds:SignedInfo>
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+                  <ds:Reference URI="#_cc5dc5b0-88d4-4dec-809a-9d86a6559c09">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>LxdVsWVtwOc/t38dlo8psB+T3aklFRRbIxx8LNToFTk=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference Type="http://uri.etsi.org/01903/v1.3.2#SignedProperties" URI="#_d104e53c-efee-4dcb-b069-bf43b1dbf4c8-signedprops">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>xoLtG0HknCODd/VqYIG4ipIe/MLMgDfhKEQzFuwSJ3A=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference>
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>SHOQtNJmvhUIJD8VmavP7g2gP4rtvz70LiQ3trHiK8k=</ds:DigestValue>
+                  </ds:Reference>
+               </ds:SignedInfo>
+               <ds:SignatureValue>aomg+zdkWfQ/4Aalnu1BM7KW5c5WfgN1j+1RiINW8ZBuMK1k6ufK5foZIaZ3AUi+4E/Db0cDKmbN
+zepaL1qJhu+Y8dkn69esN4OL989m2Ms4ApnQ1gdBtoiWjZIvEu3HO8CcFWmHHTpgXrC10amzZO87
+RXkSe1QPa8/CtzroGo3MnfFrIQhUWyh/F0lMP+PIDMMiVG10TQ/M0BUxrhjACZGtzSpCOCMqm7sl
+6nJPUzNVMJSx8UIYvYnRGXG5Oq524M77A2QzIHkFyiNnKRlLB4Wvq3LtmLq3op9FdwKYHMbaDt2A
+6tR4BHUSG9lhx4UYpSPg/9XAadsYNSLfxRULww==</ds:SignatureValue>
+               <ds:KeyInfo Id="_cc5dc5b0-88d4-4dec-809a-9d86a6559c09">
+                  <ds:X509Data>
+                     <ds:X509IssuerSerial>
+                        <ds:X509IssuerName>CN=JOPACC-ISSUER02-CA, DC=JoPACC, DC=local</ds:X509IssuerName>
+                        <ds:X509SerialNumber>1850961852260217348017076480918462043391000726</ds:X509SerialNumber>
+                     </ds:X509IssuerSerial>
+                  </ds:X509Data>
+               </ds:KeyInfo>
+               <ds:Object>
+                  <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">
+                     <xades:SignedProperties Id="_d104e53c-efee-4dcb-b069-bf43b1dbf4c8-signedprops">
+                        <xades:SignedSignatureProperties>
+                           <xades:SigningTime>2020-06-30T13:40:59+03:00</xades:SigningTime>
+                        </xades:SignedSignatureProperties>
+                     </xades:SignedProperties>
+                  </xades:QualifyingProperties>
+               </ds:Object>
+            </ds:Signature>
+         </Sgntr>
+         <Rltd>
+            <Fr>
+               <FIId>
+                  <FinInstnId>
+                     <BICFI>ARABJOAX</BICFI>
+                  </FinInstnId>
+               </FIId>
+            </Fr>
+            <To>
+               <FIId>
+                  <FinInstnId>
+                     <ClrSysMmbId>
+                        <MmbId>CBJOJOXIPS</MmbId>
+                     </ClrSysMmbId>
+                  </FinInstnId>
+               </FIId>
+            </To>
+            <BizMsgIdr>BIZ-1373770097953800</BizMsgIdr>
+            <MsgDefIdr>pacs.008.001.08</MsgDefIdr>
+            <BizSvc>IPS</BizSvc>
+            <CreDt>2020-06-30T10:40:59Z</CreDt>
+         </Rltd>
+      </AppHdr>
+      <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.009.001.07">
+         <FICdtTrf>
+            <GrpHdr>
+               <MsgId>D518/971</MsgId>
+               <CreDtTm>2020-07-02T09:00:00.726</CreDtTm>
+               <NbOfTxs>2</NbOfTxs>
+               <TtlIntrBkSttlmAmt Ccy="JOD">2.</TtlIntrBkSttlmAmt>
+               <IntrBkSttlmDt>2020-07-02</IntrBkSttlmDt>
+               <SttlmInf>
+                  <SttlmMtd>CLRG</SttlmMtd>
+               </SttlmInf>
+               <PmtTpInf>
+                  <ClrChanl>RTGS</ClrChanl>
+                  <SvcLvl>
+                     <Prtry>0004</Prtry>
+                  </SvcLvl>
+                  <LclInstrm>
+                     <Prtry>RTGS_NCLS</Prtry>
+                  </LclInstrm>
+                  <CtgyPurp>
+                     <Prtry>012</Prtry>
+                  </CtgyPurp>
+               </PmtTpInf>
+               <InstgAgt>
+                  <FinInstnId>
+                     <BICFI>CBJOJOAXIPS</BICFI>
+                  </FinInstnId>
+               </InstgAgt>
+               <InstdAgt>
+                  <FinInstnId>
+                     <BICFI>CBJOJOAX</BICFI>
+                  </FinInstnId>
+               </InstdAgt>
+            </GrpHdr>
+            <CdtTrfTxInf>
+               <PmtId>
+                  <InstrId>D518/971/1</InstrId>
+                  <EndToEndId>D518/971/1</EndToEndId>
+                  <TxId>D518/971/1</TxId>
+               </PmtId>
+               <IntrBkSttlmAmt Ccy="JOD">1.</IntrBkSttlmAmt>
+               <Dbtr>
+                  <FinInstnId>
+                     <BICFI>CBJOJOAXIPS</BICFI>
+                  </FinInstnId>
+               </Dbtr>
+               <Cdtr>
+                  <FinInstnId>
+                     <BICFI>UBSIJOAX</BICFI>
+                  </FinInstnId>
+               </Cdtr>
+               <InstrForNxtAgt>
+                  <InstrInf>/PACCTP/SLRA</InstrInf>
+               </InstrForNxtAgt>
+               <InstrForNxtAgt>
+                  <InstrInf>/SESSID/518</InstrInf>
+               </InstrForNxtAgt>
+            </CdtTrfTxInf>
+            <CdtTrfTxInf>
+               <PmtId>
+                  <InstrId>D518/971/3</InstrId>
+                  <EndToEndId>D518/971/3</EndToEndId>
+                  <TxId>D518/971/3</TxId>
+               </PmtId>
+               <IntrBkSttlmAmt Ccy="JOD">1.</IntrBkSttlmAmt>
+               <Dbtr>
+                  <FinInstnId>
+                     <BICFI>BJORJOAX</BICFI>
+                  </FinInstnId>
+               </Dbtr>
+               <Cdtr>
+                  <FinInstnId>
+                     <BICFI>CBJOJOAXIPS</BICFI>
+                  </FinInstnId>
+               </Cdtr>
+               <InstrForNxtAgt>
+                  <InstrInf>/PACCTP/SLRA</InstrInf>
+               </InstrForNxtAgt>
+               <InstrForNxtAgt>
+                  <InstrInf>/SESSID/518</InstrInf>
+               </InstrForNxtAgt>
+            </CdtTrfTxInf>
+         </FICdtTrf>
+      </Document>
+   </Body>
+</DataPDU>
