@@ -54,6 +54,9 @@
             <DtTm>2020-07-02T09:00:00.726</DtTm>
           </FctvIntrBkSttlmDt>
           <OrgnlTxRef>
+            <IntrBkSttlmAmt Ccy="JOD">
+              <value>1.</value>
+            </IntrBkSttlmAmt>
             <IntrBkSttlmDt>2020-07-02</IntrBkSttlmDt>
             <PmtTpInf>
               <ClrChanl>RTGS</ClrChanl>

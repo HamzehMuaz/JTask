@@ -1,6 +1,7 @@
 // Constants
 const valueMapping = {
   MsgNmId: 'MsgDefIdr',
+  IntrBkSttlmAmt: 'IntrBkSttlmAmt.Ccy'
 };
 
 const defaultValue = {
@@ -66,7 +67,12 @@ const fillBodyWithAnswers = (pacs002Children, current, flat91) => {
           }
           const op = findEl(flat91, alias, targetParents[alias]);
         if (op && op.length) {
-          j[name] = op[0].value
+          const value = op[0].value;
+          if (value && typeof value == 'object') {
+            j[name] = { $: { [value.node]: value.$ }, value: value.value }
+          } else {
+            j[name] = value
+          }
         }
       }
     }
@@ -88,7 +94,31 @@ const findEl = (flat91, toFind, targetParent) => {
   for (const key in flat91) {
     const length = toFind.length;
     if (key.substr(key.length - length, length) == toFind) {
-      options.push({ value: flat91[key], path: key, parents: key.split('.') })
+      const parents = key.split('.');
+      let toFindParents;
+      let value = flat91[key]
+      if (toFind.includes('.')) {
+        toFindParents = toFind.split('.');
+      }
+      if (toFindParents) {
+        let found = true;
+        const copyOfParents = [...parents];
+        while(toFindParents.length > 0) {
+          const toFindParent = toFindParents.pop();
+          const toMatchParent = copyOfParents.pop();
+          if (toFindParent != toMatchParent) {
+            found = false;
+          }
+        }
+        if (!found) {
+          continue;
+        } else {
+          copyOfParents.push(toFind.split('.')[0])
+          copyOfParents.push('$t')
+          value = { $: value, value: flat91[copyOfParents.join('.')], node: toFind.split('.')[1] };
+        }
+      }
+      options.push({ value, path: key, parents})
     }
   }
   if (options.length > 1 && targetParent) {
